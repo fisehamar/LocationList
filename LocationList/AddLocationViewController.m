@@ -17,6 +17,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    _nameField.delegate= self;
+    _addressField.delegate= self;
+    _descriptionView.delegate=self;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -24,6 +28,19 @@
     // Dispose of any resources that can be recreated.
 }
 
+-(BOOL)textFieldShouldReturn:(UITextField *)textField {
+    [textField resignFirstResponder];
+    return  YES;
+}
+
+-(BOOL)textView:(UITextView *)textView shouldChangeTextInRange:(NSRange)range replacementText:(NSString *)text {
+    
+    if ([text isEqualToString:@"\n"]) {
+        [_descriptionView resignFirstResponder];
+        return NO;
+    }
+    else return YES;
+}
 /*
 #pragma mark - Navigation
 
@@ -35,8 +52,28 @@
 */
 
 - (IBAction)addLocation:(id)sender {
+    Location* locationToAdd= [[Location alloc]initWithName:_nameField.text andAddress:_addressField.text andDescription:_descriptionView.text];
+    if(_delegate!=nil)
+    {
+        [_delegate addLocation:locationToAdd];
+        
+    }
+    [self dismissViewControllerAnimated:YES completion:nil];
+     
+
 }
 
 - (IBAction)backtoList:(id)sender {
+    
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
+
+
+
+
+-(void)textViewDidBeginEditing:(UITextView *)textView {
+    _descriptionView.text = @"";
+    _descriptionView.textAlignment = NSTextAlignmentLeft;
+}
+
 @end

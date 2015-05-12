@@ -48,6 +48,7 @@
 		3E4BECA71B02453F00A0E7BB /* LocationListTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LocationListTests.m; sourceTree = "<group>"; };
 		3E4CD49C1B0254750001EDF7 /* Location.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Location.h; sourceTree = "<group>"; };
 		3E4CD49D1B0254750001EDF7 /* Location.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Location.m; sourceTree = "<group>"; };
+		3E4CD49F1B025C750001EDF7 /* AddLocationDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddLocationDelegate.h; sourceTree = "<group>"; };
 		3E757E6C1B0249670009A358 /* AddLocationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddLocationViewController.h; sourceTree = "<group>"; };
 		3E757E6D1B0249670009A358 /* AddLocationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddLocationViewController.m; sourceTree = "<group>"; };
 		3E757E6F1B0249A50009A358 /* LocationDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationDetailViewController.h; sourceTree = "<group>"; };
@@ -103,6 +104,7 @@
 				3E4BEC951B02453F00A0E7BB /* Main.storyboard */,
 				3E757E6C1B0249670009A358 /* AddLocationViewController.h */,
 				3E757E6D1B0249670009A358 /* AddLocationViewController.m */,
+				3E4CD49F1B025C750001EDF7 /* AddLocationDelegate.h */,
 				3E4BEC981B02453F00A0E7BB /* Images.xcassets */,
 				3E4BEC9A1B02453F00A0E7BB /* LaunchScreen.xib */,
 				3E4BEC8F1B02453F00A0E7BB /* LocationList.xcdatamodeld */,
